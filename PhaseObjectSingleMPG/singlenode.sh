@@ -8,7 +8,7 @@
 
 
 
-cd /work/hmeyer5/src/PhaseObjectSingleMPG
+#cd /work/hmeyer5/src/PhaseObjectSingleMPG
 
 #export OMP_NUM_THREADS=48; ./RunGrating 250 .44 1.0 300.0 4 50
 export OMP_NUM_THREADS=48; ./RunGrating ${L2} ${LAMBDA} ${P} ${W} ${SHAPE} ${L1}
