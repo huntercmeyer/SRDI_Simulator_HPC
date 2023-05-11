@@ -231,7 +231,7 @@ int main(int argc, char** argv)
   double gSampleRate = 0.001;
   double W = atof(argv[4]); // grating period in microns
   double uWidth = W/2; // W/2
-  double uNum = 50;
+  double uNum = 100;
 
   Grating phasorG(gPitch, gSampleRate, uWidth, uNum);
   int N = phasorG.gGrid.size();
@@ -322,7 +322,8 @@ int main(int argc, char** argv)
 
   //Monochromatic set-up
 
-  double pShiftConstant= lambda/0.44e-3;
+  // double pShiftConstant= lambda/0.44e-3; // in case we switch back to neutrons (I think bc for the polyenergetic case the pShift will scale with lambda)
+  double pShiftConstant = 1; // Meaning the phase shift is wavelength independent.
   // double pShiftConstant= lambda / 0.22e-3;
   //double lambda = 0.80e-3;  // lambda is an input modifed dparameter
   double k = 2 * M_PI / lambda; 
